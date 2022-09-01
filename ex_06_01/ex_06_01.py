@@ -25,6 +25,7 @@ while True:
 
         if val < smallest:
             smallest = val
+print('good')
 
 
 
