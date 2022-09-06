@@ -19,4 +19,13 @@ while True:
     data = uh.read()
     print('Retrieved', len(data), 'characters')
     #decodes
-    print(data.decode())
+    #print(data.decode())
+tot_sum = 0
+tree = ET.fromstring(data)
+counts = tree.findall('.//count')
+for val in counts:
+    #gets val and converts to int
+    val = int(val.text)
+    tot_sum = tot_sum + val
+
+print('Sum : ',tot_sum)
