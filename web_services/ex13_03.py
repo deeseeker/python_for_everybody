@@ -42,3 +42,6 @@ while True:
         print('==== Failure To Retrieve ====')
         print(data)
         continue
+#create place_id variable and pull the value from the json and print it out
+place_id = js["results"][0]["place_id"]
+print(place_id)
