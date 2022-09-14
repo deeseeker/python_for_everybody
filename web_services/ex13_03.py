@@ -28,6 +28,7 @@ while True:
     url = serviceurl + urllib.parse.urlencode(params)
 
     print('Retrieving', url)
+    #make a request
     uh = urllib.request.urlopen(url)
     data = uh.read().decode()
     print('Retrieved', len(data), 'characters')
@@ -36,11 +37,9 @@ while True:
     except:
         js = None
 
-
+#verify status indicator is ok
     if not js or 'status' not in js or js['status'] != 'OK':
         print('==== Failure To Retrieve ====')
         print(data)
         continue
-
-
-    
+print(js.dumps(js,indent=4))
