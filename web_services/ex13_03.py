@@ -26,3 +26,6 @@ while True:
     url = serviceurl + urllib.parse.urlencode(params)
 
     print('Retrieving', url)
+    uh = urllib.request.urlopen(url, context=ctx)
+    data = uh.read().decode()
+    print('Retrieved',len(data),'characters')
