@@ -31,7 +31,11 @@ while True:
     print('Retrieved',len(data),'characters')
     try:
         js = json.loads(data)
-        
+
     except:
         None
+    if not js or 'status' not in js or js['status'] != 'OK':
+        print('==== Failure To Retrieve ====')
+        print(data)
+        continue
     print(json.dumps(js, indent=4))
