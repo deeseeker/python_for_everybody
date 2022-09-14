@@ -29,9 +29,9 @@ while True:
     uh = urllib.request.urlopen(url, context=ctx)
     data = uh.read().decode()
     print('Retrieved',len(data),'characters')
-try:
-    js = json.loads(data)
-    print(js)
-except:
-    None
+    try:
+        js = json.loads(data)
+        print(js)
+    except:
+        None
 print(js)
