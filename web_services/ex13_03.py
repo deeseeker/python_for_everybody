@@ -11,7 +11,7 @@ ctx.verify_mode = ssl.CERT_NONE
 
 api_key = False
 # If you have a Google Places API key, enter it here
-#api_key = 'AIzaSy___IDByT70'
+api_key = 'AIzaSy___IDByT70'
 # https://developers.google.com/maps/documentation/geocoding/intro
 
 if api_key is False:
@@ -42,4 +42,3 @@ while True:
         print('==== Failure To Retrieve ====')
         print(data)
         continue
-print(js.dumps(js,indent=4))
