@@ -34,3 +34,4 @@ try:
     print(js)
 except:
     None
+print(js)
