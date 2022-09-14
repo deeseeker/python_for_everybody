@@ -34,4 +34,4 @@ while True:
         print(js)
     except:
         None
-print(js)
+    print(json.dumps(js, indent=4))
