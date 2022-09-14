@@ -19,7 +19,7 @@ ctx.check_hostname = False
 
 while True:
     location = input('Enter Location-')
-    if len(locations) < 1: break
+    if len(location) < 1: break
     params = dict()
     params['location'] = location
     if api_key is not False: params['key'] = api_key
