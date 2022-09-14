@@ -31,7 +31,7 @@ while True:
     print('Retrieved',len(data),'characters')
     try:
         js = json.loads(data)
-        print(js)
+        
     except:
         None
     print(json.dumps(js, indent=4))
